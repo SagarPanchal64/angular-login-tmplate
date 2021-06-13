@@ -1,0 +1,86 @@
+$primary-color: rgba(0,0,0,0.45);
+$border-color: rgba(148, 148, 148, 0.5);
+$title-color: #232323;
+$theme-color: #6900af;
+
+.reactive-forms {
+    color: $primary-color;
+    .row {
+        height: 100vh;
+    }
+
+    .form-wrapper {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .form-label {
+        color: $title-color;
+        margin-bottom: 10px;
+    }
+
+    small {
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    .title {
+        color: $title-color;
+        margin-bottom: 5px;
+    }
+
+    a {
+        color: $theme-color;
+
+        &:hover {
+            color: $title-color;
+        }
+    }
+}
+
+.input-style-1 {
+    position: relative;
+    input {
+        border: 0;
+        border-bottom: 1px solid $primary-color;
+        border-radius: 0;
+
+        &:focus {
+            box-shadow: none;
+            outline: none;
+
+            + .searchborder {
+                width: 100%;
+            }
+        }
+    }
+
+    .searchborder {
+        display: inline-block;
+        width: 0;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: $theme-color;
+        transition: 0.3s ease-in-out;
+    }
+}
+
+.btn-login {
+    background-color: $theme-color;
+    color: white;
+    font-weight: 600;
+    padding: 10px 30px;
+    margin-top: 15px;
+    transition: 0.3s ease-in-out;
+
+    &:focus {
+        box-shadow: none;
+        outline: none;
+    }
+
+    &:hover {
+        background-color: #000;
+    }
+}

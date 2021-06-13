@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+// Variables
+$primary-font: 'Poppins', sans-serif;
+
+html,body {
+    font-family: $primary-font;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6, .h-1, .h-2, .h-3, .h-4, .h-5, .h-6 {
+    font-weight: 600;
+}
+
+h1, .h-1 {
+    font-size: 60px;
+    line-height: 65px;
+}
+
+h2, .h-2 {
+    font-size: 42px;
+    line-height: 50px;
+}
+
+h3, .h-3 {
+    font-size: 30px;
+    line-height: 35px;
+}
+
+h4, .h-4 {
+    font-size: 25px;
+    line-height: 30px;
+}
+
+h5, .h-5 {
+    font-size: 22px;
+    line-height: 30px;
+}
+
+h6, .h-6 {
+    font-size: 17px;
+    line-height: 25px;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+small, .small {
+    font-size: 15px;
+    line-height: 20px;
+}
