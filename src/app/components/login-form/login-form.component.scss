@@ -1,3 +1,4 @@
+// Colors
 $primary-color: rgba(0,0,0,0.45);
 $border-color: rgba(148, 148, 148, 0.5);
 $title-color: #232323;
@@ -7,11 +8,39 @@ $theme-color: #6900af;
     color: $primary-color;
     .row {
         height: 100vh;
+
+        @media only screen and (max-width: 991px) {
+            height: auto;
+        }
+    }
+
+    img {
+        @media only screen and (max-width: 991px) {
+            width: 60%;
+        }
     }
 
     .form-wrapper {
         width: 60%;
         margin: 0 auto;
+        padding: 50px 30px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        border-radius: 20px;
+
+        @media only screen and (max-width: 1550px) {
+            width: 70%;
+        }
+
+        @media only screen and (max-width: 1440px) {
+            width: 90%;
+        }
+
+        @media only screen and (max-width: 991px) {
+            width: 100%;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 0 15px;
+        }
     }
 
     .form-label {
@@ -21,7 +50,6 @@ $theme-color: #6900af;
 
     small {
         display: inline-block;
-        margin-top: 10px;
     }
 
     .title {
@@ -29,11 +57,69 @@ $theme-color: #6900af;
         margin-bottom: 5px;
     }
 
+    button[type="submit"] {
+        @media (max-width: 767px) {
+            width: 100%;
+            padding: 15px 30px;
+        }
+    }
+
     a {
         color: $theme-color;
 
         &:hover {
             color: $title-color;
+        }
+    }
+
+    .form-check {
+        padding-left: 0;
+
+        input {
+            opacity: 0;
+
+            &:checked {
+                + label {
+                    &:after {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+
+        label {
+            cursor: pointer;
+            position: relative;
+            padding-left: 25px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 2px;
+                left: 0;
+                width: 18px;
+                height: 18px;
+                border-radius: 5px;
+                border: 2px solid $theme-color;
+            }
+    
+            &:after {
+                content: '\2713';
+                position: absolute;
+                top: 1px;
+                left: 0;
+                line-height: 17px;
+                font-weight: 600;
+                width: 18px;
+                height: 18px;
+                border-radius: 5px;
+                color: white;
+                border: 2px solid $theme-color;
+                background-color: $theme-color;
+                opacity: 0;
+                visibility: hidden;
+            }
         }
     }
 }
@@ -82,5 +168,9 @@ $theme-color: #6900af;
 
     &:hover {
         background-color: #000;
+    }
+
+    &:active {
+        transform: scale(0.9);
     }
 }

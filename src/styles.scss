@@ -1,3 +1,4 @@
+@use "sass:map";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 // Variables
@@ -27,6 +28,11 @@ h2, .h-2 {
 h3, .h-3 {
     font-size: 30px;
     line-height: 35px;
+
+    @media (max-width: 575px) {
+        font-size: 26px;
+        line-height: 30px;
+    }
 }
 
 h4, .h-4 {
@@ -56,4 +62,9 @@ a {
 small, .small {
     font-size: 15px;
     line-height: 20px;
+}
+
+img {
+    width: 100%;
+    height: auto;
 }
